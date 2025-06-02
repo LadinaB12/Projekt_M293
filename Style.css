@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: white; 
+  background-color: white;
   margin: 0;
   color: #6247AA;
 }
@@ -19,6 +19,15 @@ main {
   box-sizing: border-box;
 }
 
+.Titel {
+  text-align: center;
+}
+
+.Titel h1,
+.Titel p {
+  text-align: center;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px;
 }
@@ -27,7 +36,6 @@ p {
   margin-bottom: 20px;
 }
 
-/* Header styles  */
 header {
   width: 100%;
   flex-shrink: 0;
@@ -36,18 +44,18 @@ header {
   margin: 0 auto;
   border-radius: 0px;
   color: #6247AA;
-} 
+}
 
 .verzierungen-container {
   position: relative;
   width: 100%;
-  height: 0; /* damit es nicht extra Platz beansprucht */
+  height: 0;
 }
 
 .verzierung {
   position: absolute;
   top: 0;
-  width: 120px; /* anpassen je nach Wunsch */
+  width: 120px;
   z-index: 1;
 }
 
@@ -59,23 +67,6 @@ header {
   right: 0;
 }
 
-/* Mobile ausblenden */
-@media (max-width: 768px) {
-  .verzierung {
-    display: none;
-  }
-}
-
-
-/* Im Handymodus ausblenden */
-@media (max-width: 768px) {
-    .verzierung {
-        display: none;
-    }
-}
-
-
-/* H1-Titel zentriert */
 h1.section-title {
   text-align: center;
   font-size: 2.5em;
@@ -85,17 +76,8 @@ h1.section-title {
 
 .projekt {
   width: 250px;
-}  
-
-main {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 20px;
-  gap: 20px;
 }
 
-/* Box style */
 .box {
   flex: 1 1 300px;
   max-width: 30%;
@@ -108,13 +90,11 @@ main {
   text-align: center;
 }
 
-/* Box-Titel */
 .box h2 {
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-/* Footer style */
 footer {
   width: 100%;
   background: #E9D2F4;
@@ -124,7 +104,7 @@ footer {
   border-radius: 0px;
   color: #6247AA;
   padding: 20px;
-} 
+}
 
 .about {
   width: 600px;
@@ -161,7 +141,6 @@ footer {
   margin: 0 auto;
 }
 
-/* Contact form styles */
 #contact form input[type="text"],
 #contact form input[type="email"],
 #contact form textarea {
@@ -183,23 +162,14 @@ footer {
 }
 
 form {
-  width: 70vw;        /* 70% der Bildschirmbreite */
-  max-width: 1200px;  /* maximal 1200px breit */
+  width: 70vw;
+  max-width: 1200px;
   margin: 40px auto;
   padding: 30px;
   background-color: #E9D2F4;
   border-radius: 15px;
   box-sizing: border-box;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-}
-
-@media (max-width: 768px) {
-  form {
-    width: 100%;       /* volle Breite auf kleinen Bildschirmen */
-    max-width: 100%;   /* max-width auch auf 100% setzen */
-    padding: 15px;
-    margin: 20px 10px;
-  }
 }
 
 fieldset {
@@ -249,13 +219,11 @@ input[type="submit"]:hover {
   background-color: gray;
 }
 
-/* Überschrift zentriert unter Header */
 .portfolio-section > .section-title {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-/* Container für die beiden Textboxen (links & rechts nebeneinander) */
 .portfolio-container {
   display: flex;
   justify-content: space-between;
@@ -265,7 +233,6 @@ input[type="submit"]:hover {
   padding: 0 1rem;
 }
 
-/* Linke Box */
 .portfolio-box.left-box {
   background-color: #E9D2F4;
   border-radius: 15px;
@@ -276,7 +243,6 @@ input[type="submit"]:hover {
   box-sizing: border-box;
 }
 
-/* Rechte Box inkl. Text und Bilder darunter */
 .portfolio-right {
   display: flex;
   flex-direction: column;
@@ -284,7 +250,6 @@ input[type="submit"]:hover {
   gap: 1rem;
 }
 
-/* Rechte Text-Box */
 .portfolio-box.right-box {
   background-color: #E9D2F4;
   border-radius: 15px;
@@ -294,7 +259,6 @@ input[type="submit"]:hover {
   box-sizing: border-box;
 }
 
-/* Bilder unter der rechten Box */
 .portfolio-images {
   display: flex;
   gap: 1rem;
@@ -310,30 +274,13 @@ input[type="submit"]:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Anpassung: auf kleineren Bildschirmen alles untereinander */
-@media (max-width: 768px) {
-  .portfolio-container {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 0 1rem;
-  }
-  .portfolio-box.left-box,
-  .portfolio-right {
-    flex: 1 1 100%;
-  }
-  .portfolio-images {
-    justify-content: center;
-  }
-}
-
-
-/* nav style  */
 .unique-nav {
   width: 100%;
   background: #E9D2F4;
   text-align: center;
   color: #6247AA;
   padding: 10px;
+  position: relative;
 }
 
 .unique-nav ul {
@@ -380,8 +327,40 @@ input[type="submit"]:hover {
   font-weight: bold;
 }
 
-/* Responsive */
-@media screen and (max-width: 900px) {
+/* ========== NEU: Burger-Menü standardmäßig verstecken (Desktop) ========== */
+.burger-toggle,
+.burger-label {
+  display: none;
+}
+
+/* ========== MEDIA QUERIES UNTEN ========== */
+@media (max-width: 768px) {
+  .verzierung {
+    display: none;
+  }
+
+  form {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    margin: 20px 10px;
+  }
+
+  .portfolio-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .portfolio-box.left-box,
+  .portfolio-right {
+    flex: 1 1 100%;
+  }
+
+  .portfolio-images {
+    justify-content: center;
+  }
+
   .box {
     max-width: 90%;
   }
@@ -389,5 +368,36 @@ input[type="submit"]:hover {
   main {
     flex-direction: column;
     align-items: center;
+  }
+
+  /* Burger-Menü nur hier aktiv */
+  .burger-label {
+    display: block;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    color: #6247AA;
+  }
+
+  .burger-toggle {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .unique-nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #E9D2F4;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 999;
+  }
+
+  .burger-toggle:checked + .burger-label + ul {
+    display: flex;
   }
 }
