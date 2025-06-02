@@ -1,0 +1,393 @@
+* {
+  font-family: 'Raleway';
+}
+
+body {
+  background-color: white; 
+  margin: 0;
+  color: #6247AA;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* Header styles  */
+header {
+  width: 100%;
+  flex-shrink: 0;
+  background: #E9D2F4;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 0px;
+  color: #6247AA;
+} 
+
+.verzierungen-container {
+  position: relative;
+  width: 100%;
+  height: 0; /* damit es nicht extra Platz beansprucht */
+}
+
+.verzierung {
+  position: absolute;
+  top: 0;
+  width: 120px; /* anpassen je nach Wunsch */
+  z-index: 1;
+}
+
+.verzierung-links {
+  left: 0;
+}
+
+.verzierung-rechts {
+  right: 0;
+}
+
+/* Mobile ausblenden */
+@media (max-width: 768px) {
+  .verzierung {
+    display: none;
+  }
+}
+
+
+/* Im Handymodus ausblenden */
+@media (max-width: 768px) {
+    .verzierung {
+        display: none;
+    }
+}
+
+
+/* H1-Titel zentriert */
+h1.section-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.projekt {
+  width: 250px;
+}  
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Box style */
+.box {
+  flex: 1 1 300px;
+  max-width: 30%;
+  background-color: #E9D2F4;
+  color: #6247AA;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+/* Box-Titel */
+.box h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Footer style */
+footer {
+  width: 100%;
+  background: #E9D2F4;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0px;
+  color: #6247AA;
+  padding: 20px;
+} 
+
+.about {
+  width: 600px;
+  margin: 0 auto;
+  padding-right: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 0px;
+  margin-top: 50px;
+  float: left;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.about h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about p {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.Bild {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.Portrait {
+  width: 200px;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Contact form styles */
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#contact form input[type="submit"] {
+  background-color: #6247AA;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#contact form input[type="submit"]:hover {
+  background-color: #6247AA;
+}
+
+form {
+  width: 70vw;        /* 70% der Bildschirmbreite */
+  max-width: 1200px;  /* maximal 1200px breit */
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #E9D2F4;
+  border-radius: 15px;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 100%;       /* volle Breite auf kleinen Bildschirmen */
+    max-width: 100%;   /* max-width auch auf 100% setzen */
+    padding: 15px;
+    margin: 20px 10px;
+  }
+}
+
+fieldset {
+  margin-bottom: 20px;
+  padding: 0;
+  border: none;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 0px;
+  box-sizing: border-box;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: none;
+}
+
+input[type="submit"] {
+  background-color: darkgrey;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: gray;
+}
+
+/* Überschrift zentriert unter Header */
+.portfolio-section > .section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Container für die beiden Textboxen (links & rechts nebeneinander) */
+.portfolio-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Linke Box */
+.portfolio-box.left-box {
+  background-color: #E9D2F4;
+  border-radius: 15px;
+  padding: 1.5rem;
+  flex: 1 1 45%;
+  color: #6247AA;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Rechte Box inkl. Text und Bilder darunter */
+.portfolio-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 45%;
+  gap: 1rem;
+}
+
+/* Rechte Text-Box */
+.portfolio-box.right-box {
+  background-color: #E9D2F4;
+  border-radius: 15px;
+  padding: 1.5rem;
+  color: #6247AA;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Bilder unter der rechten Box */
+.portfolio-images {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.portfolio-images img {
+  width: 180px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Anpassung: auf kleineren Bildschirmen alles untereinander */
+@media (max-width: 768px) {
+  .portfolio-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  .portfolio-box.left-box,
+  .portfolio-right {
+    flex: 1 1 100%;
+  }
+  .portfolio-images {
+    justify-content: center;
+  }
+}
+
+
+/* nav style  */
+.unique-nav {
+  width: 100%;
+  background: #E9D2F4;
+  text-align: center;
+  color: #6247AA;
+  padding: 10px;
+}
+
+.unique-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.unique-nav li {
+  margin: 0 10px;
+}
+
+.unique-nav a {
+  color: #6247AA;
+  text-decoration: none;
+  transition: font-size 0.2s ease;
+}
+
+.unique-nav a:hover {
+  font-size: 1.2em;
+}
+
+.unique-nav .submenu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.unique-nav .submenu-item {
+  margin-bottom: 10px;
+}
+
+.unique-nav li:hover .submenu {
+  display: block;
+}
+
+.unique-nav a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .box {
+    max-width: 90%;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+}

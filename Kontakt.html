@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <nav class="unique-nav">
+            <ul>
+              <li><a href="Index.html" class="ueber-mich">Über mich</a></li>
+              <li><a href="Faehigkeiten.html" class="faehigkeiten">Fähigkeiten</a></li>
+              <li><a href="Portfolio.html" class="home">Portfolio</a></li>
+              <li><a href="Kontakt.html" class="kontakt active">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="verzierungen-container">
+        <img src="Bilder/Verzierung_oben_links.jpg" class="verzierung verzierung-links" alt="Verzierung links">
+        <img src="Bilder/Verzierung_oben_rechts.jpg" class="verzierung verzierung-rechts" alt="Verzierung rechts">
+    </div>
+    <main>
+        <section id="contact">
+            <h1 class="section-title">Kontaktformular</h1>
+            <form method="post" action="#">
+                <fieldset>
+                    <label for="anrede">Anrede:</label>
+                    <select id="anrede" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="Herr">Herr</option>
+                    <option value="Frau">Frau</option>
+                    </select>
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" required />
+                    <label for="email">E-Mail:</label>
+                    <input id="email" type="email" required />
+                    <label for="betreff">Betreff:</label>
+                    <input id="betreff" type="text" required />
+                    <label for="nachricht">Nachricht:</label>
+                    <textarea id="nachricht" required></textarea>
+                </fieldset>
+                <input type="submit" value="Senden" />
+                </form>
+        </section>
+    </main>
+    <footer>
+        <div class="social-media">
+          <p>
+            <a href="https://www.linkedin.com/in/ladina-bertagnoli-3777b6354/" target="_blank"><i class="fab fa-linkedin"></i> <img src="Bilder/Linkedin.jpg" alt="LinkedIn" width="30px" height="30px"></a>
+            <a href="https://github.com/LadinaB12" target="_blank"><i class="fab fa-github"></i> <img src="Bilder/GitHub.png" alt="GitHub" width="30px" height="30px"></a>
+          </p>
+        </div>
+        <div class="contact-info">
+            <p>Geschäftsmail: <a href="mailto:ladina.bertagnoli@buhlergroup.com">ladina.bertagnoli@buhlergroup.com</a></p>
+            <p>Privatmail: <a href="mailto:ladina.bertagnoli@bluewin.ch">ladina.bertagnoli@bluewin.ch</a></p>
+            <p>Telefonnummer: <a href="tel:+41783143190">+41 78 314 31 90</a></p>
+        </div>
+        <div class="address">
+            <p>Adresse: Lehmetstrasse 29, 9247 Henau, Schweiz</p>
+        </div>
+        <p>Ladina Bertagnoli | Bühler Uzwil | 02.06.2025</p>
+        <p>&copy; 2025 Ladina Bertagnoli. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>
